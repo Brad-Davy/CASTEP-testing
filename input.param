@@ -1,0 +1,25 @@
+comment = nmr testing
+continuation : default
+ 
+task : SinglePoint
+geom_energy_tol : 1E-8
+geom_modulus_est : 150 gpa
+ 
+cut_off_energy = 60 ry
+ 
+xc_functional : PBE
+fix_occupancy : true
+opt_strategy : speed
+calculate_stress : true
+max_scf_cycles : 10000
+metals_method : DM
+geom_max_iter : 1000
+ 
+relativistic_treatment : zora
+ 
+sedc_apply = true
+sedc_scheme : D3-BJ
+ 
+elec_energy_tol : 1E-10 eV
+write_cell_structure = true
+finite_basis_corr = none

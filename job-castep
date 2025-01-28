@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --job-name=castep-test
+#SBATCH --partition=large
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=128  # up to 168 on one node
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=336G
+#SBATCH --time=1-00:00:00
+#SBATCH --output=%x_%j.log
+#SBATCH --exclusive
+ 
+/software/bin/runcastep_24 results/input
+
